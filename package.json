@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "deploy": "rimraf out && npm run build && type nul > out/.nojekyll",
+    "build": "set NODE_ENV=development && next build",
+    "deploy": "rimraf out && set NODE_ENV=production && next build && type nul > out/.nojekyll",
     "start": "next start",
     "lint": "eslint",
     "test:unit": "vitest run",
