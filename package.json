@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "cross-env NODE_ENV=production next build",
-    "deploy": "npm run build && rimraf docs && rename out docs && git add docs && git commit -m \"Deploy to GitHub Pages\" && git push",
+    "deploy": "ts-node deploy.ts",
     "start": "next start",
     "lint": "eslint",
     "test:unit": "vitest run",
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "-": "^0.0.1",
+    "@types/gh-pages": "^6.1.0",
     "classnames": "^2.5.1",
     "cross-env": "^10.0.0",
     "dompurify": "^3.2.6",
@@ -43,6 +44,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
     "jsdom": "^25.0.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5",
     "vite": "^5.4.10",
     "vitest": "^2.1.4"
