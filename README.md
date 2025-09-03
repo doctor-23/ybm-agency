@@ -30,6 +30,7 @@ npm run test:e2e:install
 
 - Разработка: `npm run dev` (http://localhost:3000)
 - Сборка: `npm run build`
+- Продакшн-билд: `npm run deploy`
 - Продакшн-сервер: `npm run start`
 - Линтинг: `npm run lint`
 - Юнит-тесты:
