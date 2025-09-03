@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/ybm-agency/out' : '';
-const assetPrefix = isProd ? 'https://doctor-23.github.io/ybm-agency/out' : '';
+const basePath = isProd ? '/ybm-agency' : '';
+const assetPrefix = isProd ? 'https://doctor-23.github.io/ybm-agency' : '';
 
 const nextConfig: NextConfig = {
     // включаем строгий режим React
