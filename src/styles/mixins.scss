@@ -1,0 +1,79 @@
+@mixin fullHDPlus() {
+    @media screen and (min-width: 1919.99px) {
+        @content;
+    }
+}
+
+@mixin fullHD() {
+    @media screen and (max-width: 1919.99px) {
+        @content;
+    }
+}
+
+@mixin HD() {
+    @media screen and (max-width: 1376.99px) {
+        @content;
+    }
+}
+
+@mixin laptop() {
+    @media screen and (max-width: 1200.98px) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media screen and (max-width: 1029.98px) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media screen and (max-width: 807.98px) {
+        @content;
+    }
+}
+
+@mixin fullMobile() {
+    @media screen and (max-width: 575.98px) {
+        @content;
+    }
+}
+
+@mixin safariMacOS() {
+    @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) and (not (display: -webkit-min-device-pixel-ratio)) {
+            /* Только для Safari на macOS */
+            @content;
+        }
+    }
+}
+
+@mixin safariIOS() {
+    @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+            /* Safari-only стили */
+            @content;
+        }
+    }
+}
+
+@mixin defaultList() {
+    ul, ol {
+        ul, ol {
+            padding-left: 40px;
+        }
+    }
+
+    ul {
+        list-style: disc inside;
+    }
+
+    ol {
+        list-style: decimal inside;
+    }
+
+    li {
+        display: list-item !important;
+    }
+}

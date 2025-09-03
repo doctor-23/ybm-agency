@@ -1,0 +1,50 @@
+@use '@/styles/mixins';
+
+.section {
+    padding: 120px 0;
+
+    @include mixins.tablet {
+        padding: 60px 0 80px;
+    }
+}
+
+.container {
+
+}
+
+
+
+.title {
+    margin: 0 auto 30px;
+
+    @include mixins.fullMobile {
+        margin-bottom: 20px;
+    }
+
+    &, * {
+        text-align: center;
+        font-size: 2.625rem;
+        font-weight: 600;
+
+        @include mixins.fullMobile {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+.slider {
+    margin-bottom: 30px;
+}
+
+.ctaText {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: .8125rem;
+    color: var(--color-3);
+    font-weight: 600;
+}
+
+.button {
+    max-width: max-content;
+    margin: 0 auto;
+}
