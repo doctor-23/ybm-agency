@@ -1,15 +1,13 @@
 import type { NextConfig } from "next";
 const isProd = process.env.NODE_ENV === 'production';
 const repo = 'ybm-agency';
-const basePath = isProd ? `/${repo}` : '';
-const assetPrefix = isProd ? `/${repo}` : '';
 
 const nextConfig: NextConfig = {
     // включаем строгий режим React
     reactStrictMode: true,
     output: "export",
-    basePath,
-    assetPrefix,
+    basePath: isProd ? `/${repo}` : '',
+    assetPrefix: isProd ? `/${repo}/` : '',
     compiler: {
         // Позволяет использовать SCSS modules с CSS modules
         styledComponents: false,
